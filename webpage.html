@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements Example</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #68976a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    position: relative;
+    font-size: 2em;
+}
+
+.title::before {
+    content: "🔥 ";
+    color: gold;
+    font-size: 1.5em;
+    position: absolute;
+    left: -30px;
+}
+
+.title::after {
+    content: " 🔥";
+    color: gold;
+    font-size: 1.5em;
+    position: absolute;
+    right: -30px;
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content:hover{
+    box-shadow: 0 0 10px 5px rgb(131, 79, 79);
+}
+.text {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-text::before {
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-text::after {
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Welcome to My Website</h1>
+    </header>
+    <main>
+        <section class="content">
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quibusdam deserunt facere iusto quasi inventore! Cumque dolores provident nemo quisquam laborum deserunt odit eos dolorum, adipisci doloremque quo reiciendis. Consequatur.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer-text">Copyright@ 2024 </p>
+    </footer>
+</body>
+</html>
